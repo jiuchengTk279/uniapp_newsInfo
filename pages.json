@@ -3,6 +3,8 @@
 		{
 			"path": "pages/tabbar/index/index",
 			"style": {
+				"navigationStyle":"custom",
+				"navigationBarTextStyle":"white",
 				"navigationBarTitleText": "uni-app"
 			}
 		}
@@ -12,6 +14,10 @@
         }
         ,{
             "path" : "pages/tabbar/my/my",
+            "style" : {}
+        }
+        ,{
+            "path" : "components/navbar/navbar",
             "style" : {}
         }
     ],
