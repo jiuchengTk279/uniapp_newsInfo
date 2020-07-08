@@ -8,10 +8,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "",
-	"appid": "wxcdb41bf5acb15cd4",
+	"appid": "touristappid",
 	"projectname": "uniapp_newsInfor",
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

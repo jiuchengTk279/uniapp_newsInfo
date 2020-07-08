@@ -14,3 +14,14 @@
 .icon-search:before {
 	content: "\e605";
 }
+
+
+@font-face {
+  font-family: 'iconfont';  /* project id 1932356 */
+  src: url('//at.alicdn.com/t/font_1932356_2ymsz4o1q21.eot');
+  src: url('//at.alicdn.com/t/font_1932356_2ymsz4o1q21.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1932356_2ymsz4o1q21.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1932356_2ymsz4o1q21.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1932356_2ymsz4o1q21.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1932356_2ymsz4o1q21.svg#iconfont') format('svg');
+}

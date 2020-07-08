@@ -3,6 +3,7 @@
   "navigationBarTextStyle": "white",
   "navigationBarTitleText": "uni-app",
   "usingComponents": {
-    "nav-bar": "/components/navbar/navbar"
+    "nav-bar": "/components/navbar/navbar",
+    "tab": "/components/tab/tab"
   }
 }

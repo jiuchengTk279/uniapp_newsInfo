@@ -14,7 +14,7 @@
 				</view>
 			</view>
 		</view>
-		<view style="height: 45px;"></view>
+		<view :style="{height: statusBarHeight + navBarHeight + 'px' }"></view>
 	</view>
 </template>
 
@@ -40,7 +40,7 @@
 			// console.log(info)
 			
 			// h5 app mp-alipay 这三个平台不支持这个方法
-			// #ifdef H5 || APP-PLUS || MP-ALIPAY
+			// #ifndef H5 || APP-PLUS || MP-ALIPAY
 			// 获取胶囊的位置
 			const menuButtonInfo = uni.getMenuButtonBoundingClientRect()
 			console.log(menuButtonInfo)
@@ -53,7 +53,7 @@
 	}
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 	@import '../../common/css/icon.css';
 	
 	.navbar {
