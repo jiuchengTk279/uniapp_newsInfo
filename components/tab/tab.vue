@@ -22,17 +22,30 @@
 		props: {
 			list: {
 				type: Array,
-				default: []
+				default() {
+					return []
+				}
+			},
+			tabIndex: {
+				type: Number,
+				default: 0
 			}
 		},
 		methods: {
 			clickTab(item,index) {
-				console.log(item, index)
+				// console.log(item, index)
 				this.activeIndex = index
 				this.$emit('tab', {
 					data: item,
 					index: index
 				})
+			}
+		},
+		// 可以监听 data、props 值的变化
+		watch: {
+			tabIndex(newVal) {
+				// console.log(newVal, oldVal)
+				this.activeIndex = newVal
 			}
 		}
 	}

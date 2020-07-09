@@ -1,0 +1,11 @@
+.home-swiper {
+  height: 850px;
+}
+.home-swiper .swiper-item {
+  height: 100%;
+  overflow: hidden;
+}
+.home-swiper .swiper-item .list-scroll {
+  height: 100%;
+}
+

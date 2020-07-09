@@ -4,6 +4,7 @@
   "navigationBarTitleText": "uni-app",
   "usingComponents": {
     "nav-bar": "/components/navbar/navbar",
-    "tab": "/components/tab/tab"
+    "tab": "/components/tab/tab",
+    "list": "/components/list/list"
   }
 }
