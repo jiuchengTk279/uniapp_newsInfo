@@ -35,6 +35,8 @@
   width: 100%;
 }
 .listcard .listcard-content .listcard-content_title {
+  position: relative;
+  padding-right: 30px;
   font-size: 14px;
   color: #333;
   font-weight: 400;

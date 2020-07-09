@@ -114,69 +114,74 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var Likes = function Likes() {__webpack_require__.e(/*! require.ensure | components/likes/likes */ "components/likes/likes").then((function () {return resolve(__webpack_require__(/*! ../likes/likes.vue */ 96));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   data: function data() {
     return {};
@@ -190,7 +195,16 @@ var _default =
     // },
     item: {
       type: Object,
-      default: {} } } };exports.default = _default;
+      default: {} } },
+
+
+  components: {
+    Likes: Likes },
+
+  methods: {
+    open: function open() {
+      confirm.log('打开详情页面');
+    } } };exports.default = _default;
 
 /***/ }),
 

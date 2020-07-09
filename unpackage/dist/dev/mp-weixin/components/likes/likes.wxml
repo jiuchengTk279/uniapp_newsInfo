@@ -1,0 +1,1 @@
+<view data-event-opts="{{[['tap',[['likeTap',['$event']]]]]}}" class="icons" catchtap="__e"><text class="iconfont icon-shoucang"></text></view>
