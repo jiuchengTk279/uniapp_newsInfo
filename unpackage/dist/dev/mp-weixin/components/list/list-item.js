@@ -76,7 +76,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-var components
+var components = {
+  uniLoadMore: function() {
+    return __webpack_require__.e(/*! import() | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then(__webpack_require__.bind(null, /*! @/components/uni-load-more/uni-load-more.vue */ 88))
+  }
+}
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -131,6 +135,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
+
 {
   components: {
     ListCard: ListCard,
@@ -141,7 +146,21 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
       type: Array,
       default: function _default() {
         return [];
-      } } } };exports.default = _default2;
+      } },
+
+    load: {
+      type: Object,
+      default: function _default() {
+        return {
+          loading: 'loading' };
+
+      } } },
+
+
+  methods: {
+    loadmore: function loadmore() {
+      this.$emit('loadmore');
+    } } };exports.default = _default2;
 
 /***/ }),
 

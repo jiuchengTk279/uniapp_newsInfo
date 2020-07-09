@@ -130,7 +130,11 @@ var _default =
     return {};
 
 
-  } };exports.default = _default;
+  },
+  methods: {
+    loadmore: function loadmore() {
+      console.log('触发上拉');
+    } } };exports.default = _default;
 
 /***/ }),
 

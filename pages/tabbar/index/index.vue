@@ -66,6 +66,11 @@
 				}).then((res) => {
 					// console.log(res)
 					const { data } = res
+					console.log('标签', data);
+					data.unshift({
+						name: '全部'
+					})
+					
 					this.tabList = data
 				})
 				
@@ -80,7 +85,8 @@
 			},
 			change(current) {
 				this.tabIndex = current
-				console.log('当前swiper的值',current)
+				this.activeIndex = current
+				// console.log('当前swiper的值',current)
 			}
 		}
 	}

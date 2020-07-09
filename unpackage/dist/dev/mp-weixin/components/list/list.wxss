@@ -1,5 +1,5 @@
 .home-swiper {
-  height: 850px;
+  height: 950px;
 }
 .home-swiper .swiper-item {
   height: 100%;

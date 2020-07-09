@@ -209,6 +209,11 @@ var Tab = function Tab() {__webpack_require__.e(/*! require.ensure | components/
       then(function (res) {
         // console.log(res)
         var data = res.data;
+        console.log('标签', data);
+        data.unshift({
+          name: '全部' });
+
+
         _this.tabList = data;
       });
 
@@ -223,7 +228,8 @@ var Tab = function Tab() {__webpack_require__.e(/*! require.ensure | components/
     },
     change: function change(current) {
       this.tabIndex = current;
-      console.log('当前swiper的值', current);
+      this.activeIndex = current;
+      // console.log('当前swiper的值',current)
     } } };exports.default = _default;
 
 /***/ }),
