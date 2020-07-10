@@ -4,13 +4,22 @@
 			<!-- 状态栏 -->
 			<view :style="{ height: statusBarHeight + 'px' }"></view>
 			<!-- 导航栏内容 -->
-			<view class="navbar-content" :style="{ height: navBarHeight + 'px', width: windowWidth + 'px'}">
-				<view class="navbar-search">
+			<view class="navbar-content" :class="{search: isSearch}" :style="{ height: navBarHeight + 'px', width: windowWidth + 'px'}" @click.stop="open">
+				<view v-if="isSearch" class="navbar-content_search-icons" @click="back">
+					<text class="iconfont">&#xe612;</text>
+				</view>
+				<!-- 不在搜索页 -->
+				<view class="navbar-search" v-if="!isSearch">
 					<view class="navbar-search_icon">
 						<!-- <uni-icons type="search"></uni-icons> -->
 						<text class="iconfont icon-search"></text>
 					</view>
 					<view class="navbar-search_text">uniapp、vue</view>
+				</view>
+				<!-- 在搜索页 -->
+				<view class="navbar-search" v-else>
+					<!-- 搜索页显示内容 -->
+					<input class="navbar-search_text" v-model="value" type="text" placeholder="请输入您要搜索的内容" @input="inputChange"/>
 				</view>
 			</view>
 		</view>
@@ -24,11 +33,44 @@
 			return {
 				statusBarHeight: 20,
 				navBarHeight: 45,
-				windowWidth: 375
+				windowWidth: 375,
+				val: ''
+			}
+		},
+		props: {
+			isSearch: {
+				type: Boolean,
+				default: false
+			},
+			value: {
+				type: [String, Number],
+				default: ''
+			}
+		},
+		watch: {
+			value(newValue) {
+				this.val = newValue
 			}
 		},
 		methods: {
-			
+			open() {
+				// 如果在搜索页，就不跳转
+				if (this.isSearch) return
+				uni.navigateTo({
+					url: '/pages/home-search/home-search'
+				})
+			},
+			inputChange (e) {
+				const value = e.detail
+				console.log(value)
+				this.$emit('input', value)
+			},
+			back() {
+				// this.$router.back()
+				uni.switchTab({
+					url: '../../pages/tabbar/index/index'
+				})
+			}
 		},
 		created() {
 			// 获取手机系统信息
@@ -71,6 +113,13 @@
 				padding: 0 15px;
 				height: 45px;
 				box-sizing: border-box;
+				.navbar-content_search-icons {
+					font-size: 24;
+					color: #fff;
+					font-weight: 800;
+					margin-left: 10px;
+					margin-right: 10px;
+				}
 				.navbar-search {
 					display: flex;
 					align-items: center;
@@ -90,8 +139,15 @@
 						}
 					}
 					.navbar-search_text {
-						font-size: 12px;
+						width: 100%;
+						font-size: 14px;
 						color: #999;
+					}
+				}
+				&.search {
+					padding-left: 0;
+					.navbar-search {
+						border-radius: 5px;
 					}
 				}
 			}

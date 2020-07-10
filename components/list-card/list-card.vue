@@ -87,6 +87,7 @@
 		},
 		methods: {
 			open() {
+				this.$emit('click', this.item)
 				confirm.log('打开详情页面')
 			}
 		}
