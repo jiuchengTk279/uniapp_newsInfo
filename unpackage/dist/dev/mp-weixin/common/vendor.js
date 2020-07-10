@@ -2771,7 +2771,7 @@ webpackContext.id = 12;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.get_search = exports.update_like = exports.get_list = exports.get_label = void 0;var _http = _interopRequireDefault(__webpack_require__(/*! ../http.js */ 14));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+Object.defineProperty(exports, "__esModule", { value: true });exports.update_label = exports.get_search = exports.update_like = exports.get_list = exports.get_label = void 0;var _http = _interopRequireDefault(__webpack_require__(/*! ../http.js */ 14));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
 // 获取头部导航栏的数据请求
 // export const get_label = (data) => {
@@ -2830,6 +2830,13 @@ var get_search = function get_search(data) {
     data: data });
 
 };exports.get_search = get_search;
+
+var update_label = function update_label(data) {
+  return (0, _http.default)({
+    url: 'update_label',
+    data: data });
+
+};exports.update_label = update_label;
 
 /***/ }),
 

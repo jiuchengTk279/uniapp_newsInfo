@@ -114,7 +114,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
 //
 //
 //
@@ -155,6 +155,11 @@ var _default2 =
         data: item,
         index: index });
 
+    },
+    open: function open() {
+      uni.navigateTo({
+        url: "/pages/home-label/home-label" });
+
     } },
 
   // 可以监听 data、props 值的变化
@@ -163,6 +168,7 @@ var _default2 =
       // console.log(newVal, oldVal)
       this.activeIndex = newVal;
     } } };exports.default = _default2;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 

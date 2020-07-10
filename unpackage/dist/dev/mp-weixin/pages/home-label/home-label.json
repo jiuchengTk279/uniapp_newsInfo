@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "标签管理",
+  "usingComponents": {
+    "uni-load-more": "/components/uni-load-more/uni-load-more"
+  }
+}

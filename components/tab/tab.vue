@@ -5,7 +5,7 @@
 				<view class="tab-scroll_item" v-for="(item,index) in list" :key="index" @click="clickTab(item,index)" :class="{active: activeIndex === index}">{{ item.name }} </view>
 			</view>
 		</scroll-view>
-		<view class="tab-icons">
+		<view class="tab-icons" @click="open">
 			<text class="iconfont icon-shezhi">&#xe781;</text>
 		</view>
 	</view>
@@ -38,6 +38,11 @@
 				this.$emit('tab', {
 					data: item,
 					index: index
+				})
+			},
+			open() {
+				uni.navigateTo({
+					url:"/pages/home-label/home-label"
 				})
 			}
 		},

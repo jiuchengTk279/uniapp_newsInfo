@@ -141,7 +141,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
 
 
@@ -200,7 +200,13 @@ var _navbar = _interopRequireDefault(__webpack_require__(/*! @/components/navbar
 // easyCom components/组件名/组件名.vue 局部引入
 var Tab = function Tab() {__webpack_require__.e(/*! require.ensure | components/tab/tab */ "components/tab/tab").then((function () {return resolve(__webpack_require__(/*! @/components/tab/tab.vue */ 45));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var List = function List() {__webpack_require__.e(/*! require.ensure | components/list/list */ "components/list/list").then((function () {return resolve(__webpack_require__(/*! @/components/list/list.vue */ 52));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { title: 'Hello', tabList: [], tabIndex: 0, activeIndex: 0 };}, components: { NavBar: _navbar.default, Tab: Tab, // ListScroll,
     // ListCard,
-    List: List }, onLoad: function onLoad() {this.getLabel();}, methods: { tab: function tab(_ref) {var data = _ref.data,index = _ref.index;console.log(data, index);this.activeIndex = index;}, getLabel: function getLabel() {var _this = this;
+    List: List }, onLoad: function onLoad() {var _this = this;uni.$on('labelChange', function () {// console.log('首页接收到标签页的数据',res)
+      _this.tabList = [];_this.tabIndex = 0;_this.activeIndex = 0;_this.getLabel();});}, methods: {
+    tab: function tab(_ref) {var data = _ref.data,index = _ref.index;
+      console.log(data, index);
+      this.activeIndex = index;
+    },
+    getLabel: function getLabel() {var _this2 = this;
       // 调用云函数的方法
       console.log(this.$api);
 
@@ -214,7 +220,7 @@ var Tab = function Tab() {__webpack_require__.e(/*! require.ensure | components/
           name: '全部' });
 
 
-        _this.tabList = data;
+        _this2.tabList = data;
       });
 
       // this.$api.get_label({}).then(res => {})
@@ -231,6 +237,7 @@ var Tab = function Tab() {__webpack_require__.e(/*! require.ensure | components/
       this.activeIndex = current;
       // console.log('当前swiper的值',current)
     } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 /* 23 */

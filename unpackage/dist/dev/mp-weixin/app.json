@@ -4,7 +4,8 @@
     "pages/tabbar/follow/follow",
     "pages/tabbar/my/my",
     "components/navbar/navbar",
-    "pages/home-search/home-search"
+    "pages/home-search/home-search",
+    "pages/home-label/home-label"
   ],
   "subPackages": [],
   "window": {
@@ -38,6 +39,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap99.json"
+  "usingComponents": {}
 }

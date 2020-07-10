@@ -50,7 +50,13 @@
 			List
 		},
 		onLoad() {
-			this.getLabel();
+			uni.$on('labelChange', () => {
+				// console.log('首页接收到标签页的数据',res)
+				this.tabList = []
+				this.tabIndex = 0
+				this.activeIndex = 0
+				this.getLabel()
+			})
 		},
 		methods: {
 			tab ({data, index}) {
