@@ -114,7 +114,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var Likes = function Likes() {__webpack_require__.e(/*! require.ensure | components/likes/likes */ "components/likes/likes").then((function () {return resolve(__webpack_require__(/*! ../likes/likes.vue */ 80));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var Likes = function Likes() {__webpack_require__.e(/*! require.ensure | components/likes/likes */ "components/likes/likes").then((function () {return resolve(__webpack_require__(/*! ../likes/likes.vue */ 80));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -203,9 +203,23 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
   methods: {
     open: function open() {
+      var item = this.item;
       this.$emit('click', this.item);
-      confirm.log('打开详情页面');
+      var params = {
+        _id: item._id,
+        title: item.title,
+        author: item.author,
+        create_time: item.create_time,
+        thumbs_up_count: item.thumbs_up_count,
+        browse_count: item.browse_count };
+
+      // console.log('打开详情页面', params)
+      // 注意传参长度
+      uni.navigateTo({
+        url: '/pages/home-detail/home-detail?params=' + JSON.stringify(params) });
+
     } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 
